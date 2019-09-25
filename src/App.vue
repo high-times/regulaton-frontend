@@ -1,27 +1,23 @@
 <template>
   <v-app>
 
-    <login v-if="!userLoggedin"></login>
+    <Login v-if="!$store.getters.userLoggedIn"></Login>
 
-    <Navbar v-if="userLoggedin"></Navbar>
+    <AppMain :user-loggedin="$store.getters.userLoggedIn"/>
 
-    <v-content v-if="userLoggedin">
-      <router-view/>
-    </v-content>
   </v-app>
 </template>
 
 <script>
 
-  import Navbar from "./components/Navbar";
-  import login from "./views/login";
+  import Login from "./views/Login";
+  import AppMain from "./AppMain";
 
   export default {
   name: 'App',
-
-  components: {Navbar, login},
+  components: {AppMain, Login},
   data: () => ({
-    userLoggedin:false
+
   }),
 };
 </script>
