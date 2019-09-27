@@ -7,13 +7,8 @@
                         <v-toolbar-title :style="{fontSize: fontSizeForTitle }"
                                 class="text-center full-width-title font-weight-black"
                         >
-                            <v-img
-                                    class="img-middle-text logo-image"
-                                    max-height="85px"
-                                    max-width="85px"
-                                    src="../../public/images/logo.png"
-                            ></v-img>
-                            Regulaton
+                            <LogoImage/>
+                           {{ this.$store.state.title }}
                         </v-toolbar-title
                         >
                     </v-toolbar>
@@ -54,9 +49,11 @@
 
 <script>
     import axios from "axios";
+    import LogoImage from "../components/LogoImage";
 
     export default {
         name: "login",
+        components: {LogoImage},
         props: {
             source: String
         },
@@ -121,15 +118,6 @@
     .full-width-title {
         min-width: 100%;
 
-    }
-
-    .logo-image {
-        animation: spin 3s ease-in-out;
-    }
-
-    .img-middle-text {
-        vertical-align: middle;
-        display: inline-block;
     }
 
     @keyframes spin {
