@@ -1,14 +1,17 @@
 <template>
     <v-img
+            :max-height="size"
+            :max-width="size"
+            :min-height="size"
+            :min-width="size"
             class="img-middle-text logo-image"
-            max-height="85px"
-            max-width="85px"
             src="../../public/images/logo.png"
     ></v-img>
 </template>
 <script>
     export default {
-        name: 'LogoImage'
+
+        name: 'LogoImage', props: ['size']
     }
 </script>
 <style scoped>

@@ -5,10 +5,10 @@
                 <v-col cols="12" lg="4" md="8" sm="12">
                     <v-toolbar class="mb-10" color="transparent" flat>
                         <v-toolbar-title :style="{fontSize: fontSizeForTitle }"
-                                class="text-center full-width-title font-weight-black"
+                                         class="text-center full-width-title font-weight-black"
                         >
-                            <LogoImage/>
-                           {{ this.$store.state.title }}
+                            <LogoImage size="85px"/>
+                            {{ this.$store.state.title }}
                         </v-toolbar-title
                         >
                     </v-toolbar>
@@ -32,7 +32,7 @@
                     </v-card-text>
                     <v-card-actions class="justify-center">
                         <v-btn @click="submit" color="primary" min-width="90%">Login</v-btn>
-                        <v-snackbar :value="errorMessage" color="error" bottom>
+                        <v-snackbar :value="errorMessage" bottom color="error">
                             {{ errorMessage }}
                         </v-snackbar>
                     </v-card-actions>
@@ -65,15 +65,18 @@
 
 
         }),
-      computed:{
-        fontSizeForTitle() {
-          switch (this.$vuetify.breakpoint.name) {
-            case 'xs': return '2em';
-            case 'md': return '2.5em';
-            default: return '3em';
-          }
-        }
-      },
+        computed: {
+            fontSizeForTitle() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return '2em';
+                    case 'md':
+                        return '2.5em';
+                    default:
+                        return '3em';
+                }
+            }
+        },
         methods: {
             submit: function () {
                 console.log([this.name, this.password]);
