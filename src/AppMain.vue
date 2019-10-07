@@ -40,16 +40,30 @@
                         link="/contacts"
                         name="Contacts"
                 />
-                <PageViewButton :color="this.$vuetify.theme.themes.light.reports" icon="mdi-google-analytics"
-                                link="/reports"
-                                name="Reports"/>
+                <PageViewButton
+                        :color="this.$vuetify.theme.themes.light.reports"
+                        icon="mdi-google-analytics"
+                        link="/reports"
+                        name="Reports"/>
 
             </v-card>
 
             <!--            content of each page view goes here-->
 
             <v-container class="px-3">
-                <router-view/>
+                <v-row>
+                    <v-col cols="1">
+
+                    </v-col>
+                    <v-col cols="10" style="background-color: lightpink">
+                        <router-view/>
+                    </v-col>
+                    <v-col cols="1">
+
+                    </v-col>
+
+
+                </v-row>
             </v-container>
         </v-col>
     </v-row>
