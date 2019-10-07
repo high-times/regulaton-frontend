@@ -55,14 +55,12 @@
                     <v-col cols="1">
 
                     </v-col>
-                    <v-col cols="10" style="background-color: lightpink">
+                    <v-col cols="10">
                         <router-view/>
                     </v-col>
                     <v-col cols="1">
 
                     </v-col>
-
-
                 </v-row>
             </v-container>
         </v-col>
@@ -72,11 +70,11 @@
 <script>
     import Searchbar from "./components/Searchbar";
     import PageViewButton from "./components/PageViewButton";
-    import PageViewContent from "./components/PageViewContent";
+
 
     export default {
         name: "AppMain",
-        components: {Searchbar, PageViewButton, PageViewContent},
+        components: {Searchbar, PageViewButton},
         props: {},
         data: () => ({
             menuItems: [
