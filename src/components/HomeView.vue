@@ -1,16 +1,13 @@
 <template>
 
-
+    <div>This is a home page</div>
 
 </template>
 
 <script>
 
 
-
-    export default {
-
-    }
+    export default {}
 
 </script>
 
@@ -20,4 +17,4 @@
 
     }
 
-    </style>
+</style>

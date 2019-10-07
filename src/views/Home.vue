@@ -1,15 +1,13 @@
 <template>
-
-<HomeView/>
-
+    <HomeView/>
 </template>
 
 <script>
-import HomeView from '../components/HomeView';
+    import HomeView from "../components/HomeView";
 
-export default {
-  components: {
-    HomeView,
-  },
-};
+    export default {
+        components: {
+            HomeView
+        }
+    };
 </script>

@@ -8,9 +8,9 @@ export default new Vuex.Store({
         userLoggedIn: true,
         title: "Regulaton",
         loggedInUserDetails: {
-            "FIRST_NAME": "Saurabh",
-            "LAST_NAME": "Bhansali",
-            "EMAIL": "bhansali.saurabh20@gmail.com"
+            FIRST_NAME: "Saurabh",
+            LAST_NAME: "Bhansali",
+            EMAIL: "bhansali.saurabh20@gmail.com"
         }
     },
     mutations: {
