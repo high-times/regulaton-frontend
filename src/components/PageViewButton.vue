@@ -1,5 +1,8 @@
 <template>
-    <v-btn :to="link" class="btn-style mx-4 my-2 text-none font-weight-regular" color="light-grey">
+    <v-btn
+            :to="link"
+            class="btn-style mx-4 my-2 text-none font-weight-medium subtitle-1"
+            color="#F5F5F5">
         <v-container>
             <v-row align="center" justify="center">
                 <v-icon :style="{ fontSize: 50 + 'px', color: color }">{{

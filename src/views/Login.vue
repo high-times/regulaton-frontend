@@ -8,7 +8,7 @@
                                 :style="{ fontSize: fontSizeForTitle }"
                                 class="text-center full-width-title font-weight-black"
                         >
-                            <LogoImage size="85px"/>
+                            <LogoImage size-of-icon="85px"/>
                             {{ this.$store.state.title }}
                         </v-toolbar-title>
                     </v-toolbar>

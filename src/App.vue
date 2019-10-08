@@ -11,7 +11,7 @@
         >
             <v-toolbar-title
             ><span><LogoImage sizeOfIcon="50px"/></span>
-                <span> {{ this.$store.state.title }} </span></v-toolbar-title
+                <span class="headline font-weight-black"> {{ this.$store.state.title }} </span></v-toolbar-title
             >
 
             <div class="flex-grow-1"></div>
@@ -20,7 +20,7 @@
 
             <v-menu offset-y>
                 <template v-slot:activator="{ on }">
-                    <v-btn text v-on="on">
+                    <v-btn class="text-none font-weight-regular subtitle-1 grey--text" text v-on="on">
                         Welcome Atharva
                     </v-btn>
                 </template>
@@ -44,7 +44,7 @@
         </v-content>
         <v-footer class="white">
             <div class="flex-grow-1"></div>
-            <div>Powered by - Hightimes HQ</div>
+            <div class="font-weight-thin caption">Powered by - Hightimes HQ</div>
         </v-footer>
     </v-app>
 </template>
