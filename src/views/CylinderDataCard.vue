@@ -3,6 +3,7 @@
         <template v-slot="{hover}">
             <v-card :elevation="hover ? 24 : 2" outlined style="cursor:pointer;">
 
+
                 <v-container>
                     <v-row class="my-card-title">
                         <v-col class="no-vertical-pad" justify="center">
