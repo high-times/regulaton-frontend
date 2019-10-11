@@ -11,7 +11,7 @@
         </v-card-title>
     <v-data-table
             :headers="headers"
-            :items="gasdata"
+            :items="data"
             :items-per-page="5"
             class="elevation-1"
     ></v-data-table>
@@ -31,69 +31,69 @@
                         sortable: false,
                         value: 'name',
                     },
-                    { text: 'Gas Type', value: 'gastype' },
+                    { text: 'Gas Type', value: 'type' },
                     { text: 'Owner', value: 'owner' },
                     { text: 'Status', value: 'status' }
 
                 ],
-                gasdata: [
+                data: [
                     {
                         name: 'CL 1255',
-                        gastype: 'Oxygen',
+                        type: 'Oxygen',
                         owner: 'Bhushan',
                         status: 'Booked',
                     },
                     {
                         name: 'CL 1256',
-                        gastype: 'Argon',
+                        type: 'Argon',
                         owner: 'Bhushan',
                         status: 'Available',
                     },
                     {
                         name: '2568252',
-                        gastype: 'Hydrogen',
+                        type: 'Hydrogen',
                         owner: 'Bhushan',
                         status: 'Empty',
                     },
                     {
                         name: '74855696',
-                        gastype: 'Oxygen',
+                        type: 'Oxygen',
                         owner: 'Piyush',
                         status: 'Empty',
                     },
                     {
                         name: 'Cl 1568',
-                        gastype: 'Argon',
+                        type: 'Argon',
                         owner: 'Piyush',
                         status: 'Booked',
                     },
                     {
                         name: 'Cl 2589',
-                        gastype: 'Oxygen',
+                        type: 'Oxygen',
                         owner: 'Piyush',
                         status: 'Booked',
                     },
                     {
                         name: 'Cl 7896',
-                        gastype: 'Argon',
+                        type: 'Argon',
                         owner: 'Bhushan',
                         status: 'Empty',
                     },
                     {
                         name: 'Cl 2546',
-                        gastype: 'Nitrogen',
+                        type: 'Nitrogen',
                         owner: 'Piyush',
                         status: 'Available',
                     },
                     {
                         name: 'Cl 8956',
-                        gastype: 'Oxygen',
+                        type: 'Oxygen',
                         owner: 'Piyush',
                         status: 'Available',
                     },
                     {
                         name: 'Cl 5236',
-                        gastype: 'Nitrogen',
+                        type: 'Nitrogen',
                         owner: 'Bhushan',
                         status: 'Booked',
                     },
@@ -104,5 +104,16 @@
 </script><
 
 <style>
-
+    .data.Booked
+     {
+         background: orange !important;
+     }
+    .data.Available
+    {
+        background: green !important;
+    }
+    .data.Booked
+    {
+        background: black !important;
+    }
 </style>
