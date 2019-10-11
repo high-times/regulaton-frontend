@@ -112,7 +112,7 @@
     {
         background: green !important;
     }
-    .data.Booked
+    .data.Empty
     {
         background: black !important;
     }
