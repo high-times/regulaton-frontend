@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        name: "Sheet"
+        name: "Sheet",
             data: () => ({
                 cylinderID: [
                     { header: 'Today' },
