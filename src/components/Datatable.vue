@@ -17,7 +17,11 @@
         >
 
             <template v-slot:item.status="{ item }">
-                <v-chip :color="`${getColor(item.status)}`" text-color="white">{{ item.status }}</v-chip>
+                <v-chip :color="`${getColor(item.status)}`" class="caption font-weight-medium" small text-color="white">
+                    {{
+                    item.status
+                    }}
+                </v-chip>
             </template>
         </v-data-table>
     </v-card>
