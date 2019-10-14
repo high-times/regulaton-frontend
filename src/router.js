@@ -5,11 +5,16 @@ import Inventory from "./views/Inventory.vue";
 import Bookings from "./views/Bookings.vue";
 import Reports from "./views/Reports";
 import Contacts from "./views/Contacts";
-
+import InventoryBookingHistory from "./components/InventoryBookingHistory";
 Vue.use(Router);
 
 export default new Router({
-    routes: [
+    routes: [  {
+        path: "/inventoryDetail",
+        name: "inventoryDetail",
+        component: InventoryBookingHistory,
+        props:true
+    },
         {
             path: "/",
             name: "home",
