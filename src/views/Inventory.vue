@@ -28,14 +28,16 @@
 
 <script>
     import InventoryDatatable from '../components/InventoryDatatable.vue'
+    import InventoryAddCylinder from '../components/InventoryAddCylinder.vue'
+    import router from "../router"
     // import InventorySheet from '../components/InventorySheet'
     // import InventoryBookingHistory from "../components/InventoryBookingHistory.vue"
     export default {
-        components: ({InventoryDatatable}),
+        components: ({InventoryDatatable,InventoryAddCylinder}),
 
         methods: {
             addCylinderClicked() {
-
+                    router.push({ name: 'InventoryAddCylinder' });
             }
         },
         data: function () {
@@ -44,6 +46,5 @@
     };
 </script>
 <style scoped>
-
 </style>
 

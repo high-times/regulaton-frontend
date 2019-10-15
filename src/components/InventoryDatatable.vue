@@ -40,15 +40,16 @@
 </template>
 
 <script>
-  import InventoryBookingHistory from '../components/InventoryBookingHistory';
-import router from "../router";
+    import InventoryBookingHistory from '../components/InventoryBookingHistory';
+    import router from "../router";
+
   export default {
       name: "Datatable",
       components: ({InventoryBookingHistory}),
 
       methods: {
           getColor(status) {
-              console.log(status);
+              //console.log(status);
               switch (status) {
                   case "Booked":
                       return "orange";

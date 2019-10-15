@@ -31,6 +31,7 @@
         props: ['inventorySheetDetail'],
         created() {
             if (this.inventorySheetDetail) {
+                this.detailData.cylinderType.name= this.inventorySheetDetail.name;
                 this.detailData.gasType.value = this.inventorySheetDetail.type;
                 this.detailData.owner.value = this.inventorySheetDetail.owner;
             }
