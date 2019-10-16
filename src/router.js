@@ -18,7 +18,7 @@ export default new Router({
         props:true
         },
         {
-            path: "/InventoryAddCylinder",
+            path: "/inventory/InventoryAddCylinder",
             name: "InventoryAddCylinder",
             component: InventoryAddCylinder
         },

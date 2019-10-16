@@ -1,6 +1,5 @@
 <template>
-    <v-card class="mx-auto"
-            flat>
+    <v-dialog max-width="600px">
         <v-card-title>
             <v-text-field
                     append-icon="mdi-magnify"
@@ -35,7 +34,7 @@
                 <v-btn @click="showBookingsForContact(item)" rounded x-small>View Booking</v-btn>
             </template>
         </v-data-table>
-    </v-card>
+        </v-dialog>
 </template>
 
 <script>
