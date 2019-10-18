@@ -7,11 +7,11 @@
         <v-container style="padding:0;" align="center">
         <v-row>
             <v-col>
+                <v-card-title  class="brown--text text--lighten-0">
                     <v-toolbar class="text-center" flat>
                         <v-toolbar-title style="width:100%;">
                             <h2 :style="`width:100%; color: ${this.$vuetify.theme.themes.light.inventory};`"
-                            >Add
-                    <h2 align="center">Add Cylinder Details</h2>
+                           align="center">Add Cylinder Details</h2></v-toolbar-title>
                         <v-spacer></v-spacer>
                         <v-btn icon>
                             <v-icon @click="close" class="mx-5" medium>mdi-close</v-icon>
