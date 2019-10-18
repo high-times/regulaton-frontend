@@ -7,6 +7,7 @@ import Reports from "./views/Reports";
 import Contacts from "./views/Contacts";
 import InventoryBookingHistory from "./components/InventoryBookingHistory";
 import InventoryAddCylinder from "./components/InventoryAddCylinder";
+import ContactAdd from "./components/ContactAdd";
 import BookingNewBooking from "./components/BookingNewBooking";
 
 Vue.use(Router);
@@ -28,6 +29,11 @@ export default new Router({
             path: "/inventory/InventoryAddCylinder",
             name: "InventoryAddCylinder",
             component: InventoryAddCylinder
+        },
+        {
+        path: "/contact/add",
+        name: "ContactAdd",
+        component: ContactAdd
         },
         {
             path: "/",

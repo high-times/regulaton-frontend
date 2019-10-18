@@ -1,5 +1,6 @@
 <template>
-    <v-dialog max-width="600px">
+    <v-card class="mx-auto"
+            flat>
         <v-card-title>
             <v-text-field
                     append-icon="mdi-magnify"
@@ -31,10 +32,12 @@
             </template>
 
             <template v-slot:item.view_bookings="{ item }">
-                <v-btn @click="showBookingsForContact(item)" rounded x-small>View Booking</v-btn>
+                <v-btn :color="getContactsColor()" @click="showBookingsForContact(item)" class="white--text" rounded
+                       x-small>View Booking
+                </v-btn>
             </template>
         </v-data-table>
-        </v-dialog>
+    </v-card>
 </template>
 
 <script>
@@ -87,6 +90,9 @@
                     .finally(function () {
                         // always executed
                     });
+            },
+            getContactsColor() {
+                return this.$vuetify.theme.themes.light.contacts;
             }
         },
         mounted() {
