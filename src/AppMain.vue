@@ -2,16 +2,16 @@
 
     <v-layout column>
         <v-flex style="height: 220px;">
-            <v-card class="d-flex pa-2 justify-center" flat tile>
+            <v-card class="d-flex justify-center" flat tile>
                 <Searchbar/>
             </v-card>
 
             <!--            buttons go here-->
 
             <v-card
-                    class="d-flex pa-2 justify-center"
+                    class="d-flex justify-center"
                     flat
-                    style="padding: 15px 0 15px 0; overflow-x: auto"
+                    style="overflow-x: auto"
                     tile
             >
                 <PageViewButton

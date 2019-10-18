@@ -11,13 +11,13 @@
                             :color="this.$vuetify.theme.themes.light.inventory"
                             @click="addCylinderClicked"
                             class="white--text float-right" rounded>
-                        <span>Add Cylinder</span>
+                        <span class="text-none font-weight-regular subtitle-1">Add Cylinder</span>
                     </v-btn>
                 </v-col>
             </v-row>
             <v-row>
                 <v-col>
-                    <InventoryDatatable tableHeight="420"></InventoryDatatable>
+                    <InventoryDatatable tableHeight="270"></InventoryDatatable>
                     <!--            <InventoryBookingHistory/>-->
                 </v-col>
             </v-row>

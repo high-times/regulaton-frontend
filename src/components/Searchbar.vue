@@ -2,6 +2,7 @@
     <v-row align="center" elevation="0" flat style="max-width: 650px">
         <v-text-field
                 append-icon="mdi-magnify"
+                class="mt-4"
                 label="Search"
                 outlined
                 rounded

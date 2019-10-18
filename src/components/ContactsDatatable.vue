@@ -3,7 +3,7 @@
         <v-data-table
 
                 :headers="headers"
-                :height="tableHeight"
+                :height="`${tableHeight}px`"
                 :items="contacts"
                 :items-per-page.sync="pageSize"
 

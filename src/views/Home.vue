@@ -11,13 +11,13 @@
                 <v-card>
                     <v-container style="padding:0;">
                         <!--        cylinder dashboard-->
-                        <v-row>
-                            <v-col align="center" class="display-1">
+                        <v-row style="padding:0;">
+                            <v-col align="center" class="headline" style="padding-bottom:0;">
                                 {{ cylinderCount.count}}
                             </v-col>
                         </v-row>
-                        <v-row>
-                            <v-col align="center" class="title">
+                        <v-row style="padding:0;">
+                            <v-col align="center" class="body-1" style="padding-top:0;">
                                 {{cylinderCount.text}}
                             </v-col>
                         </v-row>

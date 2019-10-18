@@ -11,13 +11,13 @@
                             :color="this.$vuetify.theme.themes.light.contacts"
                             @click="addContactClicked"
                             class="white--text float-right" rounded>
-                        <span>Add Contact</span>
+                        <span class="text-none font-weight-regular subtitle-1">Add Contact</span>
                     </v-btn>
                 </v-col>
             </v-row>
             <v-row>
                 <v-col>
-                    <ContactsDatatable table-height="420px"/>
+                    <ContactsDatatable table-height="270"/>
                     <!--            <InventoryBookingHistory/>-->
                 </v-col>
             </v-row>
