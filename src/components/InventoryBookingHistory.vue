@@ -22,7 +22,11 @@
                 </v-col>
             </v-col>
             <v-col>
-                <v-data-table
+                <v-row align="center">
+                    <span> Booking History </span>
+                </v-row>
+                    <v-row>
+                    <v-data-table
                         :calculate-widths="150"
                         :headers="headers"
                         :items="data"
@@ -33,12 +37,12 @@
                                 :color="`${getColor(item.status)}`"
                                 class="caption font-weight-medium"
                                 small
-                                text-color="white"
-                        >
+                                text-color="white">
                             {{ item.status }}
                         </v-chip>
                     </template>
                 </v-data-table>
+                    </v-row>
             </v-col>
         </v-row>
     </v-card>

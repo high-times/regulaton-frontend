@@ -7,12 +7,19 @@ import Reports from "./views/Reports";
 import Contacts from "./views/Contacts";
 import InventoryBookingHistory from "./components/InventoryBookingHistory";
 import InventoryAddCylinder from "./components/InventoryAddCylinder";
+import BookingNewBooking from "./components/BookingNewBooking";
+
 Vue.use(Router);
 
 export default new Router({
     routes: [
         {
-        path: "/inventoryDetail",
+            path: "/bookings/BookingNewBooking",
+            name: "BookingNewBooking",
+            component: BookingNewBooking
+        },
+        {
+        path: "/inventory/inventoryDetail",
         name: "inventoryDetail",
         component: InventoryBookingHistory,
         props:true

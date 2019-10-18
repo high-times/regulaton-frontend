@@ -9,13 +9,14 @@
         single-line
         v-model="search"
       ></v-text-field>
+
     </v-card-title>
+
     <v-data-table
       :headers="headers"
       :items="data"
       :items-per-page="5"
       class="elevation-1" @click:row="showAlert">
-
         <template slot="items" slot-scope="props">
             <tr @click="showAlert(props.item)">
                 <td>{{ props.item.name }}</td>
@@ -23,6 +24,9 @@
                 <td class="text-xs-right">{{ props.item.owner }}</td>
                 <td class="text-xs-right">{{ props.item.status }}</td>
             </tr>
+        </template>
+        <template v-slot:item.view_bookings="{ item }">
+            <v-btn @click="showBookingsForInventory(item)" rounded x-small class="brown lighten-1, white--text">View Booking</v-btn>
         </template>
 
       <template v-slot:item.status="{ item }">
@@ -69,6 +73,10 @@
 
              // alert('alert');
           },
+          showBookingsForInventory(item) {
+                  console.log("ITEM CLICKED!!!");
+                  console.log(item);
+          }
       },
 
       data() {
@@ -84,6 +92,7 @@
                   {text: "Gas Type", align: "center", value: "type"},
                   {text: "Owner", align: "center", value: "owner"},
                   {text: "Status", align: "center", value: "status"},
+                  {text: " ", align: "center", value: "view_bookings", sortable: false},
 
               ],
               data: [
