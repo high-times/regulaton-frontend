@@ -23,17 +23,36 @@
             </v-row>
 
         </v-container>
+        <v-dialog max-width="500px"
+                  persistent
+                  style="overflow-x: hidden;"
+                  v-model="showAddContactDialog"
+        >
+            <ContactAdd v-on:close-dialog="closeDialog()"/>
+        </v-dialog>
     </v-card>
 </template>
 
 <script>
     import ContactsDatatable from "../components/ContactsDatatable";
+    import ContactAdd from "../components/ContactAdd";
+    import router from "../router"
 
     export default {
         name: "Contacts",
-        components: {ContactsDatatable},
+        components: {ContactsDatatable, ContactAdd},
         methods: {
             addContactClicked() {
+                //router.push({name: 'ContactAdd'});
+                this.showAddContactDialog = true;
+            },
+            closeDialog() {
+                this.showAddContactDialog = false;
+            }
+        },
+        data: function () {
+            return {
+                showAddContactDialog: false
             }
         }
     };

@@ -1,21 +1,21 @@
 <template>
     <v-card class="mx-auto"
             max-width="1600"
-            >
-            <v-row class="pa-2" align="center">
-                <v-col>
-                    <v-icon class="mx-4" medium>mdi-pencil </v-icon>
-                    <v-icon class="pa-1" medium>mdi-delete</v-icon>
-                </v-col>
-                <v-col align="center">
-                    {{inventoryItem.name}} - {{inventoryItem.status}}
-                </v-col>
-                <v-col align="right">
-                    <v-icon class="mx-5" @click="close" medium>mdi-close</v-icon>
-                </v-col>
-            </v-row>
-            <v-divider ></v-divider>
-             <v-row>
+    >
+        <v-row align="center" class="pa-2">
+            <v-col>
+                <v-icon class="mx-4" medium>mdi-pencil</v-icon>
+                <v-icon class="pa-1" medium>mdi-delete</v-icon>
+            </v-col>
+            <v-col align="center">
+                {{inventoryItem.name}} - {{inventoryItem.status}}
+            </v-col>
+            <v-col align="right">
+                <v-icon @click="close" class="mx-5" medium>mdi-close</v-icon>
+            </v-col>
+        </v-row>
+        <v-divider></v-divider>
+        <v-row>
             <v-col>
                 <v-col class="pa-0">
                     <InventorySheet :inventorySheetDetail="inventoryItem"></InventorySheet>
@@ -53,16 +53,15 @@
         "name": ("BookingHistory,InventorySheet"),
         "components": ({InventorySheet}),
         "props": ['inventoryItem', 'inventorySheetDetail'],
-            created() {
-                if (this.inventorySheetDetail) {
-                    this.detailData.cylinderType.name = this.inventorySheetDetail.name;
-                }
-            },
-            created()
-            {
-                //console.log("Inside the detail view");
-                console.log(this.inventoryItem);
-            },
+        created() {
+            if (this.inventorySheetDetail) {
+                this.detailData.cylinderType.name = this.inventorySheetDetail.name;
+            }
+        },
+        created() {
+            //console.log("Inside the detail view");
+            console.log(this.inventoryItem);
+        },
         "data"() {
             return {
                 "search": "",
@@ -171,7 +170,7 @@
                         return "orange";
                     case "Closed":
                         return "green";
-                        //console.log(status);
+                    //console.log(status);
                     case "Booked":
                         return "orange";
                     case "Available":
@@ -186,7 +185,7 @@
                 }
             },
             close() {
-                router.push({ name: 'inventory' });
+                router.push({name: 'inventory'});
             },
 
         }

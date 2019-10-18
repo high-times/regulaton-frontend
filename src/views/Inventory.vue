@@ -33,11 +33,11 @@
     // import InventorySheet from '../components/InventorySheet'
     // import InventoryBookingHistory from "../components/InventoryBookingHistory.vue"
     export default {
-        components: ({InventoryDatatable,InventoryAddCylinder}),
+        components: ({InventoryDatatable, InventoryAddCylinder}),
 
         methods: {
             addCylinderClicked() {
-                    router.push({ name: 'InventoryAddCylinder' });
+                router.push({name: 'InventoryAddCylinder'});
             }
         },
         data: function () {
