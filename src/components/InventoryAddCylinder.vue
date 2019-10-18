@@ -1,5 +1,5 @@
 <template>
-    <v-card class="mx-auto elevation-3"
+    <v-card class="mt-10 mx-auto elevation-3"
             flat
             max-width="800"
     >
