@@ -2,12 +2,9 @@
     <v-row align="center" elevation="0" flat style="max-width: 650px">
         <v-text-field
                 append-icon="mdi-magnify"
-                color="white"
-                hide-details
+                label="Search"
                 outlined
-                placeholder="Search..."
                 rounded
-                single-line
         ></v-text-field>
     </v-row>
 </template>

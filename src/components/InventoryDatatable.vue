@@ -1,20 +1,12 @@
 <template>
     <v-card class="mx-auto"
-            flat>
-        <v-card-title>
-            <v-text-field
-                    append-icon="mdi-magnify"
-                    hide-details
-                    label="Search"
-                    single-line
-                    v-model="search"
-            ></v-text-field>
-        </v-card-title>
+            outlined>
         <v-data-table
                 :headers="headers"
+                :height="tableHeight"
                 :items="data"
                 :items-per-page="5"
-                @click:row="showAlert" class="elevation-1">
+                @click:row="showAlert">
 
             <template slot="items" slot-scope="props">
                 <tr @click="showAlert(props.item)">
@@ -44,7 +36,7 @@
     import router from "../router";
 
     export default {
-        name: "Datatable",
+        name: "InventoryDatatable",
         components: ({InventoryBookingHistory}),
 
         methods: {
@@ -151,6 +143,7 @@
             };
         },
 
+        props: ["tableHeight"]
     }
 </script>
 

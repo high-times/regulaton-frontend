@@ -7,6 +7,7 @@
                 class="no-fill"
                 clipped-left
                 flat
+                style="height: 60px;"
                 v-if="$store.getters.userLoggedIn"
         >
             <v-toolbar-title
@@ -39,10 +40,10 @@
                 <img alt="John" src="https://cdn.vuetifyjs.com/images/john.jpg"/>
             </v-avatar>
         </v-app-bar>
-        <v-content v-if="$store.getters.userLoggedIn">
+        <v-content fill-height v-if="$store.getters.userLoggedIn">
             <AppMain/>
         </v-content>
-        <v-footer class="white">
+        <v-footer class="white" fixed>
             <div class="flex-grow-1"></div>
             <div class="font-weight-thin caption">Powered by - Hightimes HQ</div>
         </v-footer>

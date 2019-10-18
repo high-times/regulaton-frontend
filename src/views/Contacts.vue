@@ -17,7 +17,7 @@
             </v-row>
             <v-row>
                 <v-col>
-                    <ContactsDatatable/>
+                    <ContactsDatatable table-height="420px"/>
                     <!--            <InventoryBookingHistory/>-->
                 </v-col>
             </v-row>

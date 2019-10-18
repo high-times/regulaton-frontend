@@ -17,7 +17,7 @@
             </v-row>
             <v-row>
                 <v-col>
-                    <InventoryDatatable/>
+                    <InventoryDatatable tableHeight="420"></InventoryDatatable>
                     <!--            <InventoryBookingHistory/>-->
                 </v-col>
             </v-row>

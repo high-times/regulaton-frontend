@@ -1,27 +1,37 @@
 <template>
-    <v-card class="mx-auto"
-            flat>
-        <v-card-title>
-            <v-text-field
-                    append-icon="mdi-magnify"
-                    hide-details
-                    label="Search"
-                    single-line
-                    v-model="search"
-            ></v-text-field>
-        </v-card-title>
+    <v-card class="mx-auto overflow-y-auto " outlined>
         <v-data-table
+
                 :headers="headers"
+                :height="tableHeight"
                 :items="contacts"
                 :items-per-page.sync="pageSize"
+
                 :loading="isDataLoading"
-                :loading-text="loadingText"
-
-
                 :page.sync="currentPage"
-                :server-items-length="totalContactsCount" @click:row="showAlert"
-                class="elevation-1">
+                :server-items-length="totalContactsCount"
+                @click:row="showAlert" class="elevation-1"
+                fixed-header>
 
+            <template slot="loading">
+                <v-container fluid>
+                    <v-row align="center"
+                           justify="center"
+                           style="height: 200px;">
+                        <v-col cols="4">
+                            <div class="ma-5">{{loadingText}}</div>
+                            <v-progress-linear :color="this.$vuetify.theme.themes.light.contacts"
+                                               height="3"
+                                               indeterminate
+
+                                               rounded
+                                               width="50"
+                            ></v-progress-linear>
+
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </template>
             <template slot="items" slot-scope="props">
                 <tr @click="showAlert(props.item)">
                     <td>{{ props.item.name }}</td>
@@ -46,7 +56,8 @@
     import axios from "axios";
 
     export default {
-        name: "Datatable",
+        name: "ContactsDatatable",
+        props: ["tableHeight"],
         components: ({}),
         watch: {
             currentPage: function (newPage, oldPage) {
