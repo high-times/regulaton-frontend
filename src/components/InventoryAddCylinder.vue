@@ -71,6 +71,58 @@
                 </v-col>
             </v-row>
         </v-container>
+		</v-card-title>
+                <v-form
+                        ref="form"
+                        v-model="valid"
+                        lazy-validation
+                        width
+                        class="ma-5">
+                    <v-text-field
+                            :counter="10"
+                            :rules="nameRules"
+                            box
+                            label="Cylinder Number"
+                            required
+                            v-model="CylinderNumber"
+                    ></v-text-field>
+                    <v-text-field
+                            v-model="EKCNumber"
+                            :rules="EKC"
+                            label="EKC Number"
+                            required
+                            box
+                    ></v-text-field>
+                    <v-text-field
+                            v-model="MINumber"
+                            :rules="items"
+                            label="MI Number"
+                            required
+                            box
+                    ></v-text-field>
+                    <v-menu>
+                        <template v-slot:activator="{ on }">
+                            <v-text-field
+                                    :value="due"
+                                    label="Due Date"
+                                    prepend-icon="mdi-account"
+                                    v-on="on"></v-text-field>
+                        </template>
+                        <v-date-picker v-model="due"></v-date-picker>
+                    </v-menu>
+                    <v-btn
+                            :disabled="!valid"
+                            :color="this.$vuetify.theme.themes.light.inventory"
+                            @click="Save"
+                            class="white--text float-right, mr-4, ma-5"
+                            rounded
+                            >
+                        SAVE
+                    </v-btn>
+                </v-form>
+            </v-col>
+        </v-row>
+    </v-container>
     </v-card>
 </template>
 
