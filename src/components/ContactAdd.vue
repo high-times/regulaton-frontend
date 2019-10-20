@@ -7,9 +7,9 @@
             <v-container align="center" style="padding:0; margin: 0;">
                 <v-row>
                     <v-col>
-                        <v-toolbar class="text-center" flat>
+                        <v-toolbar class="text-center" color="contacts--text" flat>
                             <v-toolbar-title style="width:100%;">
-                                <h2 :style="`width:100%; color: ${this.$vuetify.theme.themes.light.contacts};`"
+                                <h2 :style="`width:100%; `"
                                 >Add
                                     Contact</h2></v-toolbar-title>
                             <v-spacer></v-spacer>
@@ -25,34 +25,34 @@
                                 ref="form"
                                 v-model="valid"
                                 width>
-                            <v-text-field :color="`${this.$vuetify.theme.themes.light.contacts}`"
+                            <v-text-field color="contacts"
                                           label="Customer/Company Name"
                                           prepend-icon="mdi-factory" v-model="newContact.name"></v-text-field>
-                            <v-text-field :color="`${this.$vuetify.theme.themes.light.contacts}`"
+                            <v-text-field color="contacts"
                                           label="Reference name"
                                           prepend-icon="mdi-account" v-model="newContact.refName"></v-text-field>
-                            <v-textarea :color="`${this.$vuetify.theme.themes.light.contacts}`"
+                            <v-textarea color="contacts"
                                         label="Address" prepend-icon="mdi-mailbox"
                                         rows="2" v-model="newContact.address"></v-textarea>
-                            <v-text-field :color="`${this.$vuetify.theme.themes.light.contacts}`"
-                                          :rules="[validationRules.phone]"
+                            <v-text-field :rules="[validationRules.phone]"
+                                          color="contacts"
                                           label="Phone" prepend-icon="mdi-phone"
                                           type="tel" v-model="newContact.phoneNo"></v-text-field>
-                            <v-text-field :color="`${this.$vuetify.theme.themes.light.contacts}`"
-                                          :rules="[validationRules.email]"
+                            <v-text-field :rules="[validationRules.email]"
+                                          color="contacts"
                                           label="Email" prepend-icon="mdi-mail"
                                           type="email" v-model="newContact.email"></v-text-field>
-                            <v-select :color="`${this.$vuetify.theme.themes.light.contacts}`"
-                                      :items="serviceTypesList" label="Service Type"
+                            <v-select :items="serviceTypesList"
+                                      color="contacts" label="Service Type"
                                       prepend-icon="mdi-account-switch" v-model="newContact.serviceType"></v-select>
-                            <v-text-field :color="`${this.$vuetify.theme.themes.light.contacts}`"
+                            <v-text-field color="contacts"
                                           label="Agent name"
                                           prepend-icon="mdi-account" v-model="newContact.agentName"></v-text-field>
 
-                            <v-btn :color="this.$vuetify.theme.themes.light.contacts"
-                                   :disabled="!valid"
+                            <v-btn :disabled="!valid"
                                    @click="addContact"
                                    class="white--text float-right mr-4"
+                                   color="contacts"
                                    rounded
                             >
                                 Add
@@ -71,7 +71,7 @@
                        justify="center"
                 >
                     <v-col class="text-center" cols="12">
-                        <v-progress-circular :color="this.$vuetify.theme.themes.light.contacts"
+                        <v-progress-circular color="contacts"
                                              indeterminate
                                              size="50"
                         ></v-progress-circular>
@@ -84,7 +84,7 @@
         </v-overlay>
 
         <v-snackbar
-                :color="`${this.$vuetify.theme.themes.light.contacts}`"
+                color="contacts"
                 v-model="snackbar"
         >
             {{ snackbarText }}

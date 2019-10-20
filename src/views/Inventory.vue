@@ -23,6 +23,14 @@
             </v-row>
 
         </v-container>
+        <v-dialog
+                max-width="500px"
+                persistent
+                style="overflow-x: hidden;"
+                v-model="showAddItemDialog"
+        >
+            <InventoryAddCylinder ref="itemAddRef" v-on:close-dialog="closeDialog()"></InventoryAddCylinder>
+        </v-dialog>
     </v-card>
 </template>
 
@@ -30,6 +38,7 @@
     import InventoryDatatable from '../components/InventoryDatatable.vue'
     import InventoryAddCylinder from '../components/InventoryAddCylinder.vue'
     import router from "../router"
+    import {CommunicationBus} from "../main";
     // import InventorySheet from '../components/InventorySheet'
     // import InventoryBookingHistory from "../components/InventoryBookingHistory.vue"
     export default {
@@ -37,11 +46,25 @@
 
         methods: {
             addCylinderClicked() {
-                router.push({name: 'InventoryAddCylinder'});
+                this.showAddItemDialog = true;
+            },
+            closeDialog() {
+                this.showAddItemDialog = false;
             }
         },
         data: function () {
-            return {}
+            return {
+                showAddItemDialog: false
+            }
+        },
+        watch: {
+            showAddItemDialog: (isShowing, wasShowing) => {
+                if (isShowing === true) {
+                    CommunicationBus.$emit('item-add-dialog-opened', {
+                        isShowing: isShowing
+                    });
+                }
+            }
         }
     };
 </script>
