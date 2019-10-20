@@ -7,6 +7,9 @@ import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
 import VueApexCharts from 'vue-apexcharts'
 
+export const CommunicationBus = new Vue();
+
+
 Vue.use(VueApexCharts);
 
 Vue.component('apexchart', VueApexCharts);

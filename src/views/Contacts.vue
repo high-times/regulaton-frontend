@@ -23,12 +23,13 @@
             </v-row>
 
         </v-container>
-        <v-dialog max-width="500px"
-                  persistent
-                  style="overflow-x: hidden;"
-                  v-model="showAddContactDialog"
+        <v-dialog
+                max-width="500px"
+                persistent
+                style="overflow-x: hidden;"
+                v-model="showAddContactDialog"
         >
-            <ContactAdd v-on:close-dialog="closeDialog()"/>
+            <ContactAdd ref="contactAddRef" v-on:close-dialog="closeDialog()"/>
         </v-dialog>
     </v-card>
 </template>
@@ -36,6 +37,7 @@
 <script>
     import ContactsDatatable from "../components/ContactsDatatable";
     import ContactAdd from "../components/ContactAdd";
+    import {CommunicationBus} from "../main";
     import router from "../router"
 
     export default {
@@ -53,6 +55,16 @@
         data: function () {
             return {
                 showAddContactDialog: false
+            }
+        },
+        watch: {
+
+            showAddContactDialog: (isShowing, wasShowing) => {
+                if (isShowing === true) {
+                    CommunicationBus.$emit('contacts-add-dialog-opened', {
+                        isShowing: isShowing
+                    });
+                }
             }
         }
     };
