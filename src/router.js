@@ -8,6 +8,10 @@ import Contacts from "./views/Contacts";
 import InventoryBookingHistory from "./components/InventoryBookingHistory";
 import InventoryAddCylinder from "./components/InventoryAddCylinder";
 import ContactAdd from "./components/ContactAdd";
+import BookingSheet from "./components/BookingSheet";
+import BookingNewBooking from "./components/BookingNewBooking";
+import BookingDatatable from "./components/BookingDatatable";
+import BookingDetail from "./components/BookingDetail";
 
 Vue.use(Router);
 
@@ -23,6 +27,27 @@ export default new Router({
             path: "/inventory/InventoryAddCylinder",
             name: "InventoryAddCylinder",
             component: InventoryAddCylinder
+        },
+        {
+            path: "/BookingDatatable",
+            name: "BookingDatatable",
+            component: BookingDatatable,
+        },
+        {
+            path: "/bookings/BookingNewBooking",
+            name: "BookingNewBooking",
+            component: BookingNewBooking,
+        },
+        {
+            path: "/bookings/BookingDetail",
+            name: "BookingDetail",
+            component: BookingDetail,
+            props: true
+        },
+        {
+            path: "BookingSheet",
+            name: "BookingSheet",
+            component: BookingSheet,
         },
         {
             path: "/contact/add",
